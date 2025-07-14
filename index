@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETİ ELEKTROMETALURJİ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%), url('https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            z-index: 1;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background-color: #3b82f6;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="https://etimet.com/wp-content/uploads/2025/01/etimet.png" alt="ETİMET Logo" class="h-12">
+            </a>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#tarihce" class="text-gray-800 hover:text-blue-600 font-medium">Tarihçe</a>
+                <a href="#yatirimci" class="text-gray-800 hover:text-blue-600 font-medium">Yatırımcı İlişkileri</a>
+                <a href="#krom" class="text-gray-800 hover:text-blue-600 font-medium">Krom</a>
+                <a href="#urunlerimiz" class="text-gray-800 hover:text-blue-600 font-medium">Ürünlerimiz</a>
+                <a href="#surdurulebilirlik" class="text-gray-800 hover:text-blue-600 font-medium">Sürdürülebilirlik</a>
+                <a href="https://e-sirket.mkk.com.tr/?page=company&company=24470#" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-blue-600 font-medium">Bilgi Toplumu Hizmetleri</a>
+            </nav>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <a href="#tarihce" class="block py-2 text-gray-800 hover:text-blue-600">Tarihçe</a>
+            <a href="#yatirimci" class="block py-2 text-gray-800 hover:text-blue-600">Yatırımcı İlişkileri</a>
+            <a href="#krom" class="block py-2 text-gray-800 hover:text-blue-600">Krom</a>
+            <a href="#urunlerimiz" class="block py-2 text-gray-800 hover:text-blue-600">Ürünlerimiz</a>
+            <a href="#surdurulebilirlik" class="block py-2 text-gray-800 hover:text-blue-600">Sürdürülebilirlik</a>
+            <a href="https://e-sirket.mkk.com.tr/?page=company&company=24470#" target="_blank" rel="noopener noreferrer" class="block py-2 text-gray-800 hover:text-blue-600">Bilgi Toplumu Hizmetleri</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white tracking-tight">ETİMET</h1>
+            <p class="text-xl md:text-3xl mb-8 text-white max-w-3xl mx-auto leading-relaxed">
+                Türkiye'nin Tek, Avrupa'nın En Büyük Kapasiteli Düşük Karbonlu Ferrokrom Üreticisi
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#about" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full inline-block transition-all duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto text-center">
+                    KEŞFET
+                </a>
+                <a href="#urunlerimiz" class="bg-transparent hover:bg-white/10 text-white font-bold py-4 px-10 rounded-full inline-block transition-all duration-300 transform hover:scale-105 border-2 border-white w-full sm:w-auto text-center">
+                    ÜRÜNLERİMİZ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://etimet.com/wp-content/uploads/2025/01/Aerial-768x477.jpg" alt="ETİMET Fabrika" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Hoşgeldiniz</h2>
+                    <p class="text-gray-700 mb-4">
+                        Şirketimiz, Eti Elektrometalurji Anonim Şirketi; Krom Cevheri, Kuvarsit, Silikoferrokrom, Düşük ve Ultra-Düşük Karbonlu Ferrokrom üreticisidir. Ürünlerimizden Krom Cevheri ve Kuvarsit, Silikoferrokrom gibi yine kendi ara ürünlerimizin hammaddeleridir.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        Şirketimizin Krom Madenciliğinin geçmişi, bazılarının başlangıcı Osmanlı Devleti döneminde fermanla verilen ruhsatlara uzanmaktadır. Şirketimiz Etibank iştirakiyle Türkiye'nin ikinci Ağır Sanayi tesisi olarak inşa edilen Antalya Elektrometalurji Fabrikasında, 1962 yılından bu yana kesintisiz olarak Düşük Karbonlu Ferrokrom üretmektedir.
+                    </p>
+                    <a href="#tarihce" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full inline-block transition duration-300">DAHA FAZLA</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Stats -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Şirketimiz</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Türkiye'de:</h3>
+                    <p class="mb-6">Türkiye'nin tek Düşük ve Ultra-Düşük Karbonlu Ferrokrom üreticisi olarak, Türkiye İhracatçılar Meclisi'nin yayımladığı "Türkiye'nin İlk 1000 İhracatçısı" listesine göre;</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-2"></i>
+                            <span>2021 yılında Türkiye ihracatında 219.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-2"></i>
+                            <span>2022 yılında Türkiye ihracatında 137.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-2"></i>
+                            <span>2023 yılında Türkiye ihracatında 276. sırada yer aldık.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Tüm Sektörde:</h3>
+                    <p class="mb-6">Uluslararası Krom Geliştirme Birliği ICDA'nın yıllık sektör istatistiklerine göre, Eti Elektrometaluji A.Ş.;</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-trophy mt-1 mr-2"></i>
+                            <span>Üretim kapasitesi açısından Avrupa'nın en büyük Düşük ve Ultra-Düşük Karbonlu Ferrokrom üreticisidir.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-trophy mt-1 mr-2"></i>
+                            <span>2023 yılında Avrupa'ya en çok Düşük Karbonlu Ferrokrom ihraç eden üreticidir.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-trophy mt-1 mr-2"></i>
+                            <span>Dışa bağımlı olmadan Silikoferrokrom üretebilen Avrupa'daki tek üreticidir.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-trophy mt-1 mr-2"></i>
+                            <span>Ürün kalitesi açısından, Dünyanın en iyi iki üreticisinden biridir.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="tarihce" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Tarihçemiz</h2>
+            
+            <div class="relative">
+                <!-- Timeline -->
+                <div class="space-y-8">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item relative pl-8">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="absolute -left-3 top-6 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"></div>
+                            <h3 class="text-xl font-semibold text-blue-600 mb-2">19. Yüzyıl</h3>
+                            <p class="text-gray-700">
+                                Fethiye, Muğla'da bulunan Krom yatakları yabancılar tarafından işletilmeye ve Avrupa'ya taşınmaya başladı.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item relative pl-8">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="absolute -left-3 top-6 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"></div>
+                            <h3 class="text-xl font-semibold text-blue-600 mb-2">1935</h3>
+                            <p class="text-gray-700">
+                                Gazi Mustafa Kemal Atatürk'ün direktifiyle Etibank kuruldu. Fethiye'deki Krom ruhsatları Fethiye Şirket-i Madeniyesi T.A.Ş.'e geçti.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item relative pl-8">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="absolute -left-3 top-6 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"></div>
+                            <h3 class="text-xl font-semibold text-blue-600 mb-2">1957</h3>
+                            <p class="text-gray-700">
+                                Türk Etibank ve Fransız Pechiney-Compadec grupları Antalya'da bir Düşük Karbonlu Ferrokrom Fabrikası kurmaya karar verdi.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item relative pl-8">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="absolute -left-3 top-6 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"></div>
+                            <h3 class="text-xl font-semibold text-blue-600 mb-2">1962</h3>
+                            <p class="text-gray-700">
+                                Antalya Elektrometalurji Fabrikası törenle açıldı. Kuruluş üretim kapasitesi yılda 8 bin metrik-ton'du.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 5 -->
+                    <div class="timeline-item relative pl-8">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="absolute -left-3 top-6 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"></div>
+                            <h3 class="text-xl font-semibold text-blue-600 mb-2">2004</h3>
+                            <p class="text-gray-700">
+                                Özelleştirilerek Aksu Madencilik Sanayi ve Elektrik Üretim Ticaret A.Ş.'ye devredildi.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 6 -->
+                    <div class="timeline-item relative pl-8">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <div class="absolute -left-3 top-6 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"></div>
+                            <h3 class="text-xl font-semibold text-blue-600 mb-2">2016</h3>
+                            <p class="text-gray-700">
+                                Yapılan yatırımlarla üretim kapasitesi yılda 36.000 metrik-ton'a çıkarıldı.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investor Relations -->
+    <section id="yatirimci" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Yatırımcı İlişkileri</h2>
+            
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold text-blue-600 mb-6">Halka Arz</h3>
+                <p class="text-gray-700 mb-8">
+                    Halka arz ile ilgili yayınlanan belgeleri aşağıdaki butonlara tıklayarak görüntüleyebilir ve indirebilirsiniz.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://etimet.com/wp-content/uploads/2025/01/Etimet-Izahname.pdf" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-center transition duration-300">
+                        <i class="fas fa-file-pdf mr-2"></i> Taslak İzahname
+                    </a>
+                    <a href="https://etimet.com/wp-content/uploads/2025/01/Fon-Kullanim-Raporuna-Iliskin-YKK-Noter-Onayli.pdf" target="_blank" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-6 rounded-full text-center transition duration-300">
+                        <i class="fas fa-file-alt mr-2"></i> Fon Kullanım Raporu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Chromium -->
+    <section id="krom" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">KROM HAKKINDA</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div>
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Kromun Tarihçesi</h3>
+                    <p class="text-gray-700 mb-4">
+                        Modern arkeologlar, Antik Çin uygarlığının kullandığı bazı silahların iki bin yıldan bu yana paslanmadığını, bunun Krom kaplı olmalarının sayesinde olduğunu belirtmektedirler.
+                    </p>
+                    <p class="text-gray-700">
+                        Alman jeolog Johann Gottlob Lehmann, 1766 yılında kaleme aldığı eserinde Sibirya'nın Ural Dağları'nda sarı-turuncu renkli bir mineralden bahseder. Bu mineral, bugün bilinen adıyla Krokoit olan Kurşun-Krom bileşiğidir.
+                    </p>
+                </div>
+                <div>
+                    <img src="https://etimet.com/wp-content/uploads/2025/01/Konsantrator-1024x431.jpg" alt="Krom Cevheri" class="rounded-lg shadow-md w-full">
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Chromium Card -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h4 class="text-xl font-semibold text-blue-600 mb-3">Krom</h4>
+                    <p class="text-gray-700">
+                        Cr sembolüyle gösterilen, atom numarası 24, standart atom ağırlığı 51.9961 olan, gümüş renkli parlak görünümlü metalik bir elementtir.
+                    </p>
+                </div>
+                
+                <!-- Chromite Card -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h4 class="text-xl font-semibold text-blue-600 mb-3">Kromit</h4>
+                    <p class="text-gray-700">
+                        Demir, Krom ve Oksijenden oluşan FeCr2O4 veya MgAlFeCr2O3 moleküler yapısıyla gösterilen spinel grubu mineraldir. Krom Cevherinden elde edilir.
+                    </p>
+                </div>
+                
+                <!-- Chromium Ore Card -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h4 class="text-xl font-semibold text-blue-600 mb-3">Krom Cevheri</h4>
+                    <p class="text-gray-700">
+                        Krom sadece Krom Cevherinden elde edilebilir. Kom Cevheri, içeriğine bağlı olmakla beraber koyu griden siyaha uzanan bir mat renk spektrumundadır.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="urunlerimiz" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Ürünlerimiz</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div>
+                    <img src="https://etimet.com/wp-content/uploads/2025/01/LCFeCr-1024x682.jpg" alt="Düşük Karbonlu Ferrokrom" class="rounded-lg shadow-md w-full">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Düşük Karbonlu Ferrokrom</h3>
+                    <p class="text-gray-700 mb-6">
+                        İçeriğinde %0,500'ten daha az oranda Karbon olan, Ultra-Düşük Karbonlu Ferrokrom ise içeriğinde %0,030 ve daha az oranda Krom olan Ferrokromdur.
+                    </p>
+                    <p class="text-gray-700">
+                        Eti Elektrometalurji A.Ş. olarak ürün dağılımımızın çoğunluğu %0,100 Karbon oranındadır. Yani genel ürün kalitemiz, sektörel tanım sınırından beş kat daha yüksektir.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Product Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- LC-FeCr Card -->
+                <div class="product-card bg-white p-6 rounded-lg shadow-md border border-gray-200 transition duration-300">
+                    <h3 class="text-xl font-bold text-blue-600 mb-4">DÜŞÜK KARBONLU FERROKROM (LC-FeCr)</h3>
+                    <h4 class="text-lg font-semibold mb-3">KİMYASAL ÖZELLİKLER</h4>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white">
+                            <thead>
+                                <tr>
+                                    <th class="py-2 px-4 border-b border-gray-200 bg-gray-50 text-left text-sm font-semibold text-gray-700">Elementler [%]</th>
+                                    <th class="py-2 px-4 border-b border-gray-200 bg-gray-50 text-left text-sm font-semibold text-gray-700">Analiz Yöntemleri</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">Cr 68 - 74</td>
+                                    <td class="py-2 px-4 border-b border-gray-200">ASTM E363 / XRF</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">Si 1,0 % max.</td>
+                                    <td class="py-2 px-4 border-b border-gray-200">TS 2521, XRF</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">C 0,05 max.</td>
+                                    <td class="py-2 px-4 border-b border-gray-200">LECO CS744</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">P 0,030 max.</td>
+                                    <td class="py-2 px-4 border-b border-gray-200">ICP OES</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">S 0,025 max</td>
+                                    <td class="py-2 px-4 border-b border-gray-200">LECO CS744</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h4 class="text-lg font-semibold mt-6 mb-3">DİĞER ÖZELLİKLER</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><span class="font-medium">Yoğunluk:</span> 7,16 gr/cm3</li>
+                        <li><span class="font-medium">Erime Sıcaklığı:</span> 1.545 °C</li>
+                        <li><span class="font-medium">Boyutlar:</span> 10-50 mm(90%min.)Std.</li>
+                    </ul>
+                </div>
+                
+                <!-- ULC-FeCr Card -->
+                <div class="product-card bg-white p-6 rounded-lg shadow-md border border-gray-200 transition duration-300">
+                    <h3 class="text-xl font-bold text-blue-600 mb-4">ULTRA-DÜŞÜK KARBONLU FERROKROM (ULC-FeCr)</h3>
+                    <h4 class="text-lg font-semibold mb-3">KİMYASAL ÖZELLİKLER</h4>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white">
+                            <thead>
+                                <tr>
+                                    <th class="py-2 px-4 border-b border-gray-200 bg-gray-50 text-left text-sm font-semibold text-gray-700">Elementler [%]</th>
+                                    <th class="py-2 px-4 border-b border-gray-200 bg-gray-50 text-left text-sm font-semibold text-gray-700">Analiz Yöntemleri</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">Cr 68 - 74</td>
+                                    <td class="py-2 px-4 border-b border-gray-200">ASTM E363 / XRF</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">Si 1,0 max.</td>
+                                    <td class="py-2 px-4 border-b border-gray-200">TS 2521, XRF</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">C 0,015 max.</td>
+                                    <td class="py-2 px-4 border-b border-gray-200">LECO CS744</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">P 0,030 max.</td>
+                                    <td class="py-2 px-4 border-b border-gray-200">ICP OES</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4 border-b border-gray-200">S 0,025 max</td>
+                                    <td class="py-2 px-4 border-b border-gray-200">LECO CS744</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h4 class="text-lg font-semibold mt-6 mb-3">DİĞER ÖZELLİKLER</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><span class="font-medium">Yoğunluk:</span> 7,16 gr/cm3</li>
+                        <li><span class="font-medium">Erime Sıcaklığı:</span> 1.545 °C</li>
+                        <li><span class="font-medium">Boyutlar:</span> 10-50 mm (%90 min.) Std.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Düşük ve Ultra-Düşük Karbonlu Ferrokrom'un Başlıca Kullanım Alanları</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Application 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-industry text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue-600">Demir-Çelik Endüstrisi</h3>
+                    </div>
+                    <p class="text-gray-700">
+                        Üretilecek Çelik kalitesinde, istenen Krom miktarını hassas bir şekilde sağlamak için kullanılmaktadır. Üretilen Düşük Karbonlu Ferrokrom'un yaklaşık %80'i bu sektör tarafından tüketilmektedir.
+                    </p>
+                </div>
+                
+                <!-- Application 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-cubes text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue-600">Döküm Endüstrisi</h3>
+                    </div>
+                    <p class="text-gray-700">
+                        Üretilecek yüksek Çelik kalitesinde, istenen Krom miktarını sağlamak için doğrudan kullanılmaktadır. Üretilen Düşük Karbonlu Ferrokrom'un yaklaşık %15'i bu sektör tarafından tüketilmektedir.
+                    </p>
+                </div>
+                
+                <!-- Application 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-plane text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-blue-600">Özel/Süper Alaşımlı Çelikler</h3>
+                    </div>
+                    <p class="text-gray-700">
+                        Havacılık, Uzay, Otomotiv, Petrol, Doğal Gaz, Petrokimya, Enerji, Tıp gibi sektörlerin yüksek hassasiyet gerektiren özel ürünlerindeki Krom ihtiyacı, Düşük ve Ultra-Düşük Karbonlu Ferrokrom ile sağlanmaktadır.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <img src="https://etimet.com/wp-content/uploads/2025/01/EAF.jpg" alt="EAF" class="rounded-lg shadow-md w-full">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Düşük ve Ultra Düşük Karbonlu Ferrokrom (LC ve ULC-FeCr) Üretimi</h3>
+                    <p class="text-gray-700 mb-4">
+                        DKFeCr, ergitilmiş Kromit'in, Silikoferrokrom (SiFeCr) metali ile silikotermik reaksiyonu sonucu üretilir. Bu reaksiyon için gerekli sıvı Kromit, ergitme fırınında (EAF); sıvı veya katı Silikoferrokrom metali, bir indirgeme fırınında (SAF) üretilmektedir.
+                    </p>
+                    <p class="text-gray-700">
+                        ETİ, birbirinden bağımsız iki ayrı ünitede; toplam 14 MVA gücünde ergitme fırınları ve toplam 22,5 MVA indirgeme fırınları ile, yılda 36.000 Mton DKFeCr üretim kapasitesine sahiptir.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section id="surdurulebilirlik" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">SÜRDÜRÜLEBİLİRLİK</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div>
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Yönetim Sistemleri</h3>
+                    <p class="text-gray-700 mb-6">
+                        Şirketimiz sürdürülebilirlik çalışmaları ile, sektörde en iyi konumda olmayı hedeflemektedir. Sürdürülebilir Entegre Yönetim Sistemimiz hali hazırda 5 farklı yönetim sistemine göre kurgulanmış ve gereklilikleri sağlanmıştır.
+                    </p>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-lg font-semibold mb-3">Şirketimizde yürürlükte olan Yönetim Sistemleri:</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>ISO 9001:2015 Kalite</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>ISO 14001:2015 Çevre</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>ISO 45001:2018 İş Sağlığı ve Güvenliği</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3">2025 yılında yürürlüğe girecek Yönetim Sistemleri:</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-clock text-yellow-500 mt-1 mr-2"></i>
+                                <span>ISO 50001:2018 Enerji</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-clock text-yellow-500 mt-1 mr-2"></i>
+                                <span>ISO 46001:2019 Su Verimliliği</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://etimet.com/wp-content/uploads/2025/01/Switch.jpg" alt="Sürdürülebilirlik" class="rounded-lg shadow-md w-full">
+                </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold text-blue-600 mb-4">EcoVadis</h3>
+                <p class="text-gray-700 mb-4">
+                    Şirketimiz; Çevre Duyarlılığı, Etik İlkeler, İş ve İnsan Hakları, Satınalma gibi sürdürülebilirlik konularında, Ecovadis tarafından değerlendirilmektedir.
+                </p>
+                <p class="text-gray-700 mb-6">
+                    EcoVadis, kuruluşunuzun tüm değer zinciri boyunca sürdürülebilirlik performansını yönetmesine, ölçmesine ve iyileştirmesine yardımcı olmak için tasarlanmış bir dizi sürdürülebilirlik çözümü sunan bir SaaS şirketidir.
+                </p>
+                <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                    <p class="text-blue-800">
+                        Şirketimiz Ecovadis sistemi içerisinde Sürdürülebilir Yönetim biçimi ile Paydaşlarına, Çevreye ve Enerji Kaynaklarına olan dikkati sayesinde ve bu sistem içerisinde yapmış olduğu raporlamalar ve objektif deliller sonucunda 2025 yılı içerisinde Bronz madalyayı almak için hak kazanmıştır.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo Column -->
+                <div>
+                    <img src="https://etimet.com/wp-content/uploads/2025/01/etimet-300x106.png" alt="ETİMET Logo" class="h-12 mb-4">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 Her Hakkı Saklıdır F1KR1B1R
+                    </p>
+                </div>
+                
+                <!-- Menu Column -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Menu</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#tarihce" class="text-gray-400 hover:text-white">Tarihçe</a></li>
+                        <li><a href="#yatirimci" class="text-gray-400 hover:text-white">Yatırımcı İlişkileri</a></li>
+                        <li><a href="#krom" class="text-gray-400 hover:text-white">Krom</a></li>
+                        <li><a href="#urunlerimiz" class="text-gray-400 hover:text-white">Ürünlerimiz</a></li>
+                        <li><a href="#surdurulebilirlik" class="text-gray-400 hover:text-white">Sürdürülebilirlik</a></li>
+                        <li><a href="https://e-sirket.mkk.com.tr/?page=company&company=24470#" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">Bilgi Toplumu Hizmetleri</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Column -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">İletişim Bilgileri</h4>
+                    <address class="not-italic text-gray-400">
+                        <p class="mb-2">
+                            <a href="https://maps.app.goo.gl/6uVGudKcGjKVCnDS7" class="hover:text-white">
+                                <i class="fas fa-map-marker-alt mr-2"></i> Kepez Mah. Antalya Blv. No:5, 07090
+                            </a>
+                        </p>
+                        <p class="mb-2">Kepez/Antalya</p>
+                        <p>
+                            <a href="tel:+902423325460" class="hover:text-white">
+                                <i class="fas fa-phone mr-2"></i> +90 (242) 332 54 60
+                            </a>
+                        </p>
+                    </address>
+                </div>
+                
+                <!-- Social Media Column -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Bizi Takip Edin</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
